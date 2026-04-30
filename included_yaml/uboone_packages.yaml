@@ -1,0 +1,4 @@
+packages:
+  ubutil:
+    require:
+    - '@=10.20.04'

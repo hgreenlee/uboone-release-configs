@@ -1,0 +1,95 @@
+spack:
+  config:
+    deprecated: true
+  include:
+  # Toolchain defintion.
+  # Defines the compiler (gcc or llvm/clang) and version.
+  - git: https://github.com/art-framework-suite/art-release-configs
+    tag: art-3.14.04
+    paths:
+    - included_yaml/gcc-12-toolchain.yaml
+
+  # Packages defintions.
+  # These are version and variant requirements for a package suite
+  - git: https://github.com/LArSoft/larsoft-release-configs
+    tag: larsoft-10.20.03
+    paths:
+    - included_yaml/larsoft-packages.yaml
+  
+  - git: https://github.com/NuSoftHEP/nusofthep-release-configs
+    tag: nusofthep-3.22.00
+    paths:
+    - included_yaml/nusofthep-packages.yaml
+  
+  - git: https://github.com/art-framework-suite/art-release-configs
+    tag: art-3.14.04
+    paths:
+    - included_yaml/packages-art.yaml
+  
+  - git: https://github.com/fnal-fife/fife-release-configs
+    commit: 4d43722522644a481f2b8aa7a4981b98a5df30e5
+    paths:
+    - included_yaml/fife_packages.yaml
+
+  # Spec definitions.
+  # These are definitions of the root specs for a package suite
+  - git: https://github.com/LArSoft/larsoft-release-configs
+    tag: larsoft-10.20.03
+    paths:
+    - included_yaml/larsoft-specs.yaml
+  
+  - git: https://github.com/NuSoftHEP/nusofthep-release-configs
+    tag: nusofthep-3.22.00
+    paths:
+    - included_yaml/nusofthep-specs.yaml
+  
+  - git: https://github.com/art-framework-suite/art-release-configs
+    tag: art-3.14.04
+    paths:
+    - included_yaml/specs-art.yaml
+  
+  - git: https://github.com/fnal-fife/fife-release-configs
+    commit: 4d43722522644a481f2b8aa7a4981b98a5df30e5
+    paths:
+    - included_yaml/fife_specs.yaml
+
+  - git: https://github.com/hgreenlee/uboone-release-configs
+    branch: main
+    paths:
+    - included_yaml/uboone_specs.yaml
+    - included_yaml/uboone_packages.yaml
+
+  specs:
+    - $specs_art
+    - $specs_nusofthep
+    - $specs_larsoft
+    - $fife_specs
+    - $specs_uboone
+
+  upstreams:
+    cvmfs-larsoft:
+      install_tree: /cvmfs/larsoft.opensciencegrid.org/spack-fnal-v1.1.0/spack_env/opt/spack
+
+  concretizer:
+    unify: true
+    reuse:
+      from:
+      - type: environment
+        path: /cvmfs/larsoft.opensciencegrid.org/spack-fnal-v1.1.0/spack_env/var/spack/environments/larsoft-v10_20_03-unified-cuda-python-3_9-trimmed-rc1
+  view: true
+  packages:
+    all:
+      providers:
+        libc:
+        - glibc
+        'zlib-api:':
+        - zlib
+      variants:
+      - generator=ninja
+      - build_type=Release
+      - cxxstd=17
+      target:
+      - x86_64_v3
+    python:
+      require:
+      - "@:3.10"
