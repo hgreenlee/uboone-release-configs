@@ -74,6 +74,8 @@ spack:
     unify: true
     reuse:
       from:
+      - type: local
+      - type: external
       - type: environment
         path: /cvmfs/larsoft.opensciencegrid.org/spack-fnal-v1.1.0/spack_env/var/spack/environments/larsoft-v10_20_03-unified-cuda-python-3_9-trimmed-rc1
   view: true
