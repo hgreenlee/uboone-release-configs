@@ -17,3 +17,6 @@ packages:
   ubevt:
     require:
     - '@=10.20.07'
+  ubcrt:
+    require:
+    - '@=10.21.00'
