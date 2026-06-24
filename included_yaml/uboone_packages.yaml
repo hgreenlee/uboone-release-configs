@@ -23,3 +23,6 @@ packages:
   ubsim:
     require:
     - '@=10.21.00'
+  ubreco:
+    require:
+    - '@=10.21.00'
