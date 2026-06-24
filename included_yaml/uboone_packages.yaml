@@ -32,3 +32,6 @@ packages:
   ubana:
     require:
     - '@=10.21.00'
+  ublite:
+    require:
+    - '@=10.21.00'
