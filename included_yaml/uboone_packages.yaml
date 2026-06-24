@@ -8,3 +8,6 @@ packages:
   ubobj:
     require:
     - '@=10.20.07'
+  ubcore:
+    require:
+    - '@=10.20.07'
