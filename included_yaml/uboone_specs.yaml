@@ -4,6 +4,7 @@ definitions:
   - ubutil%build_compiler
   - ubobj%build_compiler
   - ubcore%build_compiler
+  - ubraw%build_compiler
 #  - ubana%build_compiler
 #  - ubdl%build_compiler
 #  - ubcrt%build_compiler
@@ -11,6 +12,5 @@ definitions:
 #  - ubevt%build_compiler
 #  - ublite%build_compiler
 #  - uboonecode%build_compiler
-#  - ubraw%build_compiler
 #  - ubreco%build_compiler
 #  - ubsim%build_compiler

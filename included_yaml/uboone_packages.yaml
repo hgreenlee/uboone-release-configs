@@ -11,3 +11,6 @@ packages:
   ubcore:
     require:
     - '@=10.20.07'
+  ubraw:
+    require:
+    - '@=10.20.07'
