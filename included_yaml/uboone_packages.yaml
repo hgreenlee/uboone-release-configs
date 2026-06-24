@@ -26,3 +26,6 @@ packages:
   ubreco:
     require:
     - '@=10.21.00'
+  ubcv:
+    require:
+    - '@=10.21.00'
