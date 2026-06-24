@@ -1,7 +1,10 @@
 packages:
+  #uboonedata:
+  #  require:
+  #  - '@=10.20.04'
   ubutil:
     require:
     - '@=10.20.07'
-  uboonedata:
+  ubobj:
     require:
-    - '@=10.20.04'
+    - '@=10.20.07'
