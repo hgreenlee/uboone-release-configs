@@ -12,5 +12,5 @@ definitions:
   - ubcv%build_compiler
   - ubana%build_compiler
   - ublite%build_compiler
+  - uboonecode%build_compiler
 #  - ubdl%build_compiler
-#  - uboonecode%build_compiler

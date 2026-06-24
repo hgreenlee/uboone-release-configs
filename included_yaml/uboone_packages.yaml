@@ -35,3 +35,6 @@ packages:
   ublite:
     require:
     - '@=10.21.00'
+  uboonecode:
+    require:
+    - '@=10.21.00'
