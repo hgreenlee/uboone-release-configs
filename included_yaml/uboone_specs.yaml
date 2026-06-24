@@ -13,4 +13,4 @@ definitions:
   - ubana%build_compiler
   - ublite%build_compiler
   - uboonecode%build_compiler
-#  - ubdl%build_compiler
+  - ubdl%build_compiler
